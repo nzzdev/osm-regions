@@ -1,0 +1,17 @@
+{
+  "name": "osm-regions",
+  "version": "0.1.0",
+  "description": "Extract region geometries (ISO 3166 countries and subdivisions) from OpenStreetMap in order to create a region dataset compatible with OpenMapTiles.",
+  "author": "Roman Karavia",
+  "license": "MIT",
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "d3-dsv": "^1.2.0",
+    "d3-geo": "^1.12.1",
+    "mapshaper": "^0.4.161",
+    "opener": "^1.5.1",
+    "prettier": "^2.0.5",
+    "query-overpass": "^1.5.5",
+    "tileserver-gl-light": "^3.0.0"
+  }
+}

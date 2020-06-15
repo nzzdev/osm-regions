@@ -1,0 +1,7 @@
+{
+  "data": {
+    "regions": {
+      "mbtiles": "../11-join-tiles/output/regions.mbtiles"
+    }
+  }
+}
