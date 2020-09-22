@@ -16,7 +16,7 @@ Landing page: https://osmdata.openstreetmap.de/data/land-polygons.html
 
 You may want to open the file in mapshaper and check that the polygons do not self-intersect, because clipping with self-intersecting polygons will corrupt data. For example, clipping with these polygons removes most of Japan from the output:
 
-<img src="screenshot_mapshaper.png" alt="Screenshot" width="640">
+<img src="screenshots/mapshaper.png" alt="Screenshot" width="640">
 
 You can also use
 [this snapshot of land polygons](https://nzz-q-assets-stage.s3.amazonaws.com/q-locator-map/land-polygons-complete-4326_2019-11-18.zip)
@@ -37,6 +37,16 @@ Direct links:
 - https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip
 
 Landing page: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/
+
+## Dependencies
+
+Run
+
+```bash
+npm install
+```
+
+to install the dependencies.
 
 ## Steps
 

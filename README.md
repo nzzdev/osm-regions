@@ -24,6 +24,16 @@ The code in this repository is licensed under the MIT license.
 
 Have a look at [the steps required to extract and prepare the data](STEPS.md)
 
+### Preparing a new release
+
+Run this script to generate release assets in `prepare-release/release-assets`:
+
+`{version}` should be the version tag, e.g. v0.2.0
+
+```bash
+prepare-release/prepare-release.sh {version}
+```
+
 ## Uses
 
 This data is used in the [Q Locator Map Tool](https://github.com/nzzdev/Q-locator-map),
@@ -33,15 +43,14 @@ for which a [demo](https://editor.q.tools) is also available.
 
 ### Countries (overview)
 
-<img src="screenshot_countries.png" alt="Screenshot Countries" width="800">
+<img src="screenshots/countries.png" alt="Screenshot Countries" width="800">
 
 ### Subdivisions (overview)
 
-<img src="screenshot_subdivisions.png" alt="Screenshot Subdivisions" width="800">
+<img src="screenshots/subdivisions.png" alt="Screenshot Subdivisions" width="800">
 
 ### Close-ups
 
-<img src="screenshot_Liechtenstein.png" alt="Screenshot Liechtenstein" width="400">
+<img src="screenshots/Liechtenstein.png" alt="Screenshot Liechtenstein" width="400">
 
-<img src="screenshot_Appenzell.png" alt="Screenshot Appenzell Innerrhoden" width="400">
-
+<img src="screenshots/Appenzell.png" alt="Screenshot Appenzell Innerrhoden" width="400">
