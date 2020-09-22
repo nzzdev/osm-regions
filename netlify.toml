@@ -1,0 +1,3 @@
+[build]
+  command = "./preview-website/build.sh"
+  publish = "preview-website/public"

@@ -14,7 +14,7 @@ cd $(dirname "$0")
 )
 
 # Download and extract tileset
-curl -L -o build/regions.zip https://github.com/nzzdev/osm-regions/releases/download/v0.1.0/regions-v0.1.0.zip
+curl -L -o build/regions.zip https://github.com/nzzdev/osm-regions/releases/download/v0.2.0/regions-mbtiles-v0.2.0.zip
 unzip build/regions.zip -d build
 
 # Extract tiles

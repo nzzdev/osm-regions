@@ -9,9 +9,10 @@ Reduced quality, up to zoom level 8
 
 The following data is provided:
 
-- [Land borders of countries](https://github.com/nzzdev/osm-regions/releases/download/v0.1.0/countries-v0.1.0.zip) (as defined in [ISO_3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)) extracted from OpenStreetMap as GeoJSON
-- [Land borders of subdivisions](https://github.com/nzzdev/osm-regions/releases/download/v0.1.0/subdivisions-v0.1.0.zip) (as defined in [ISO_3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)) extracted from OpenStreetMap as GeoJSON
-- [Vector tile set in mbtiles format](https://github.com/nzzdev/osm-regions/releases/download/v0.1.0/regions-v0.1.0.zip) with 2 layers (countries, subdivisions) for simplified rendering of the data, compatible with OpenMapTiles
+- [Land borders of countries](https://github.com/nzzdev/osm-regions/releases/download/v0.2.0/countries-geojson-v0.2.0.zip) (as defined in [ISO_3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)) extracted from OpenStreetMap as GeoJSON
+- [Land borders of subdivisions](https://github.com/nzzdev/osm-regions/releases/download/v0.2.0/subdivisions-geojson-v0.2.0.zip) (as defined in [ISO_3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)) extracted from OpenStreetMap as GeoJSON
+- [Simplified geometries of all countries/subdivisions](https://github.com/nzzdev/osm-regions/releases/download/v0.2.0/simplified-regions-v0.2.0.zip) as GeoJSON
+- [Vector tile set in mbtiles format](https://github.com/nzzdev/osm-regions/releases/download/v0.2.0/regions-mbtiles-v0.2.0.zip) with 2 layers (countries, subdivisions) for simplified rendering of the data, compatible with OpenMapTiles
 
 ## License
 

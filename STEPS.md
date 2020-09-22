@@ -19,7 +19,7 @@ You may want to open the file in mapshaper and check that the polygons do not se
 <img src="screenshots/mapshaper.png" alt="Screenshot" width="640">
 
 You can also use
-[this snapshot of land polygons](https://nzz-q-assets-stage.s3.amazonaws.com/q-locator-map/land-polygons-complete-4326_2019-11-18.zip)
+[this snapshot of land polygons](https://github.com/nzzdev/osm-regions/releases/download/v0.2.0/osmdata-land-polygons-v0.2.0.zip)
 with correct polygons.
 
 ### Natural earth
