@@ -6,7 +6,7 @@ step_root=$(dirname "$0")
 input_dir="$step_root/../00-static-data"
 output_dir="$step_root/output"
 
-ne_countries="$input_dir/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp"
+ne_countries="$input_dir/ne_10m_admin_0_countries_ukr/ne_10m_admin_0_countries_ukr.shp"
 ne_states_provinces="$input_dir/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp"
 
 mkdir -p "$output_dir"

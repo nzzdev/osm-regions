@@ -11,7 +11,7 @@ mkdir -p "$output_dir"
 tippecanoe \
   --minimum-zoom=0 \
   --maximum-zoom=4 \
-  --named-layer="{\"file\": \"$input_dir/ne_10m_admin_0_countries.json\", \"layer\": \"countries\"}" \
+  --named-layer="{\"file\": \"$input_dir/ne_10m_admin_0_countries_ukr.json\", \"layer\": \"countries\"}" \
   --named-layer="{\"file\": \"$input_dir/ne_10m_admin_1_states_provinces.json\", \"layer\": \"subdivisions\"}" \
   --include=wikidata \
   --simplification=4 \

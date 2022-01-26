@@ -3,7 +3,7 @@ const path = require("path");
 
 function notInNaturalEarth(inputDir, filterFile) {
   const filenames = [
-    "ne_10m_admin_0_countries.json",
+    "ne_10m_admin_0_countries_ukr.json",
     "ne_10m_admin_1_states_provinces.json"
   ];
   const naturalEarthRegions = filenames
