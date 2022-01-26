@@ -25,7 +25,7 @@ async function queryRegionsByCountry(countryCode, overpassResult) {
     "wikidata",
     "name",
     "name:de",
-    "name:en"
+    "name:en",
   ];
 
   if (overpassResult) {
@@ -42,12 +42,12 @@ async function queryRegionsByCountry(countryCode, overpassResult) {
 
   return {
     geojson,
-    rawData: overpassResult
+    rawData: overpassResult,
   };
 }
 
 function queryOverpass(query) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const runQuery = () => {
       queryOverpassWithCallback(query, (error, data) => {
         if (error) {
@@ -61,16 +61,18 @@ function queryOverpass(query) {
             throw error;
           }
         } else {
+          console.log("Query done");
           resolve(data);
         }
       });
     };
+
     runQuery();
   });
 }
 
 function sleep(seconds) {
-  return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+  return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
 }
 
 async function parseOverpassResult(overpassResult, keepTags, countryCode) {
@@ -80,16 +82,16 @@ async function parseOverpassResult(overpassResult, keepTags, countryCode) {
   geojson.bbox = getBbox(geojson);
 
   // Keep only Polygon and MultiPolygon features
-  geojson.features = geojson.features.filter(feature => {
+  geojson.features = geojson.features.filter((feature) => {
     const { type } = feature.geometry;
     return type === "Polygon" || type === "MultiPolygon";
   });
 
-  geojson.features.forEach(feature => {
+  geojson.features.forEach((feature) => {
     // Keep only a subset of tags
     const { tags } = feature.properties;
     const properties = {};
-    keepTags.forEach(keepTag => {
+    keepTags.forEach((keepTag) => {
       if (tags[keepTag] === undefined) {
         properties[keepTag] = null;
       } else {
@@ -121,7 +123,7 @@ async function parseOverpassResult(overpassResult, keepTags, countryCode) {
 
   // Remove duplicate wikidata entries
   const featuresByWikidata = {};
-  geojson.features.forEach(feature => {
+  geojson.features.forEach((feature) => {
     const { wikidata } = feature.properties;
     if (wikidata) {
       if (!featuresByWikidata[wikidata]) {
@@ -136,7 +138,7 @@ async function parseOverpassResult(overpassResult, keepTags, countryCode) {
     }
   });
   geojson.features = [];
-  Object.values(featuresByWikidata).forEach(features => {
+  Object.values(featuresByWikidata).forEach((features) => {
     features.sort(
       (a, b) => a.properties.admin_level - b.properties.admin_level
     );
@@ -155,7 +157,7 @@ function getBbox(geojson) {
   // D3 required the opposite of the standard (RFC 7946) GeoJSON winding order:
   // The exterior ring for polygons must be clockwise.
   const geojsonClockwise = turf.rewind(geojson, {
-    reverse: true
+    reverse: true,
   });
   // D3 instead of turf is used to get a correct bounding box for countries that
   // cross the antimeridian (180° east/west), for example Russia, United States

@@ -1,3 +1,4 @@
+require("longjohn");
 const queryRegionsByCountry = require("./query-regions-by-country");
 const fs = require("fs");
 const path = require("path");
