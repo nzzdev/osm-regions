@@ -5,6 +5,14 @@ Extract region geometries (ISO 3166 countries and subdivisions) from OpenStreetM
 ⚡ **[Preview the data](https://osm-regions.netlify.app/)**
 Reduced quality, up to zoom level 8
 
+## Installation
+```bash
+npm install
+brew install tippecanoe
+```
+
+Tippecanoe installation: For non OSX systems checkout [mapbox tippecanoe installation guide](https://github.com/mapbox/tippecanoe) on how to install.
+
 ## Data
 
 The following data is provided:

@@ -32,12 +32,12 @@ Download "countries" and "states and provinces" and unpack and store the shapefi
 - `00-static-data/ne_10m_admin_1_states_provinces`
 
 Direct links:
-
-- https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip
+- https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries_ukr.zip
 - https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip
 
 Landing page: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/
 
+Notes: We currently use the ukrainian 'point of view' data for admin level 0. See https://github.com/nvkelso/natural-earth-vector/issues/489 for further details.
 ## Dependencies
 
 Run
