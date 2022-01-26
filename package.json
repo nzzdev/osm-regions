@@ -8,6 +8,7 @@
     "@turf/turf": "^5.1.6",
     "d3-dsv": "^1.2.0",
     "d3-geo": "^1.12.1",
+    "longjohn": "^0.2.12",
     "mapshaper": "^0.4.161",
     "opener": "^1.5.1",
     "prettier": "^2.0.5",
