@@ -8,17 +8,7 @@ output_dir="$step_root/output"
 
 mkdir -p "$output_dir"
 
-# Split countries into regions & output in country specific folders
-for file_path in "$input_dir"/*.json;
-do
-      filename=$(basename -- "$file_path")
-      filename="${filename%.*}"
-      file_output_dir="$output_dir/$filename"
-      
-      mkdir -p "$file_output_dir"
-
-      npx mapshaper \
-        -i "$file_path" no-topology name= \
-        -split wikidata \
-        -o format=geojson "$file_output_dir"
-done
+npx mapshaper \
+  -i "$input_dir"/*.json no-topology name= \
+  -split wikidata \
+  -o format=geojson "$output_dir"
