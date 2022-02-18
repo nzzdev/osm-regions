@@ -1,23 +1,12 @@
 const fs = require("fs");
 const { geoBounds } = require("d3-geo");
 const queryOverpassWithCallback = require("query-overpass");
+const queryRegionsBuilder = require("./query-regions-builder");
+const countryBoundaryViewpoints = require("./country_boundary_viewpoints");
 const turf = require("@turf/turf");
 
 async function queryRegionsByCountry(countryCode, overpassResult) {
-  const query = `
-    [out:json];
-
-    (
-      relation
-        [boundary=administrative]
-        ["ISO3166-1"="${countryCode}"];
-
-      relation
-        [boundary=administrative]
-        ["ISO3166-2"~"^${countryCode}"];
-    );
-    
-    out; >; out skel;`;
+  const query = queryRegionsBuilder(countryCode, countryBoundaryViewpoints);
   const keepTags = [
     "ISO3166-1",
     "ISO3166-2",
