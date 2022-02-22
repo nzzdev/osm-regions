@@ -6,12 +6,14 @@ Extract region geometries (ISO 3166 countries and subdivisions) from OpenStreetM
 Reduced quality, up to zoom level 8
 
 ## Installation
+
 ```bash
 npm install
-brew install tippecanoe
+brew install tippecanoe jq
 ```
 
-Tippecanoe installation: For non OSX systems checkout [mapbox tippecanoe installation guide](https://github.com/mapbox/tippecanoe) on how to install.
+tippecanoe installation: For non OSX systems checkout [mapbox tippecanoe installation guide](https://github.com/mapbox/tippecanoe) on how to install.
+jq installation: [jq download page](https://stedolan.github.io/jq/download/)
 
 ## Data
 
