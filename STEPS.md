@@ -32,12 +32,14 @@ Download "countries" and "states and provinces" and unpack and store the shapefi
 - `00-static-data/ne_10m_admin_1_states_provinces`
 
 Direct links:
+
 - https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries_ukr.zip
 - https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip
 
 Landing page: https://www.naturalearthdata.com/downloads/10m-cultural-vectors/
 
 Notes: We currently use the ukrainian 'point of view' data for admin level 0. See https://github.com/nvkelso/natural-earth-vector/issues/489 for further details.
+
 ## Dependencies
 
 Run
@@ -58,22 +60,28 @@ import-osm/import-osm.sh
 
 #### 1. Query list of countries (Overpass)
 
+Queries the OSM Overpass API for all countries.
+Note: The Overpass API also has a online [Sandbox](https://overpass-turbo.eu/) for testing queries.
+
 Input: Nothing.
-Output: List of countries with ISO3166-1 codes.
+Output: List of countries. Each country consists of ISO3166-1 codes, wikidata Id, name, name:de, name:en.
 
 #### 2. Query regions by country (Overpass)
 
-Input: List of countries with ISO3166-1 codes.
-Output: For every country, one GeoJSON file with country and subdivision polygons.
+Queries the OSM Overpass API for all regions of each country.
+Note: Country boundary/border adjustments are made during this step, according to the query changes noted in [this file](./import-osm/02-query-regions/country_boundary_viewpoints.js).
 
-Also store raw data only download if raw data is not available.
+Input: List of countries from Step 1.
+Output: For every country, one GeoJSON file with country and subdivision polygons.
 
 #### 3. Clip with land polygons
 
 Input: For every country, one GeoJSON file with country and subdivision polygons.
 Output: For every country, one GeoJSON file with country and subdivision polygons.
 
-#### 4. Reduce regions (remove small disconnected parts, e.g. remove French Guiana from France)
+#### 4. Reduce regions
+
+Remove small disconnected parts, e.g. remove French Guiana from France
 
 Input: For every country, one GeoJSON file with country and subdivision polygons.
 Output: For every country, one GeoJSON file with country and subdivision polygons.
@@ -112,6 +120,11 @@ Output: mbtiles file with 2 layers (countries, subdivisions).
 
 Input: mbtiles files from steps 8/10.
 Output: mbtiles file with 2 layers (countries, subdivisions), using natural earth data for zoom levels 0-4 and Openstreetmap data for zoom levels 5-10.
+
+#### 12. Upload tileset (TODO)
+
+Input: mbtiles files from step 11.
+Output: link to uploaded mbtiles file
 
 ### Clean up
 
