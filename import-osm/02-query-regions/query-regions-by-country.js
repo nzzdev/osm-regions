@@ -38,6 +38,7 @@ async function queryRegionsByCountry(countryCode, overpassResult) {
 function queryOverpass(query) {
   return new Promise((resolve) => {
     const runQuery = () => {
+      console.log("Run Query");
       queryOverpassWithCallback(query, (error, data) => {
         if (error) {
           if (error.statusCode === 429) {
@@ -47,6 +48,7 @@ function queryOverpass(query) {
             console.log("Gateway timeout, will retry in 30 seconds...");
             sleep(30).then(runQuery);
           } else {
+            console.error(error);
             throw error;
           }
         } else {
@@ -56,7 +58,7 @@ function queryOverpass(query) {
       });
     };
 
-    runQuery();
+    sleep(20).then(runQuery);
   });
 }
 

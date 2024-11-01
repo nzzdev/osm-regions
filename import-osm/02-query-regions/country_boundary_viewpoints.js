@@ -28,7 +28,7 @@ const countryBoundaryViewpoints = [
     "ISO3166-1": "RU", // Country to query
     affectedAreas: [
       {
-        description: "Exclude crimea region",
+        description: "Exclude crimea region from russian border boundaries",
         "ISO3166-1": {
           exclude: {
             "according_to:UA": "no",
